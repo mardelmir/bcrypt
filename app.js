@@ -7,7 +7,6 @@ const session = require('express-session')
 
 const hashedSecret = require('./crypto/config')
 const routes = require('./routes/users')
-const middleware = require('./middlewares/authMiddleware')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
@@ -19,6 +18,4 @@ app.use(session({
 
 app.use('/', routes)
 
-app.listen(PORT, () => {
-    console.log(`Express está escuchando en el puerto http://localhost:${PORT}`)
-})
+app.listen(PORT, () => { console.log(`Express está escuchando en el puerto http://localhost:${PORT}`) })

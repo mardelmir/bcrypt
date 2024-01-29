@@ -1,7 +1,9 @@
-const crypto = require('node:crypto')
+const crypto = require('crypto')
 const bcrypt = require('bcrypt')
 
-const secret = crypto.randomBytes(64).toString('hex');
+const secret = crypto.randomBytes(64).toString('hex'); // OK
 const hashedSecret = bcrypt.hashSync(secret, 10);
 
-module.exports = { hashedSecret }
+// Usar bcrypt para añadir salt a las contraseñas de los usuarios
+
+module.exports = hashedSecret 

@@ -38,4 +38,4 @@ implementalas en `crypto/confing.js` y úsalas en secret de session y donde crea
 En la entrada de nuestra aplicación aparecerán los inputs de `login` y `pass`. Si nos hemos logado ya y volvemos a esa entrada no deberán salir, y sí saldrá un enlace al `dashboard` y un botón de `logout`
 
 # PISTAS:
-- Puedes partir del ejercicio del vídeo y modularlo y añadir lo que necesites nuevo.
+- Puedes partir del ejercicio del vídeo, modularlo y añadir lo que necesites nuevo.

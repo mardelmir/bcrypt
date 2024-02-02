@@ -42,7 +42,6 @@ router.post('/login', (req, res) => {
 
 router.get('/dashboard', verifyToken, (req, res) => {
     const userId = req.user;
-    console.log(req.user)
     const user = users.find((user) => user.id === userId);
     const dasboard = `
         <h1>¡Bienvenido ${user.name}!</h1>

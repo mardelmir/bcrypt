@@ -8,7 +8,7 @@ const verifyToken = (req, res, next) => {
     
     !token
         ? res.status(401).send('<h1>Error de autenticación</h1><p>Token no generado</p><a href="/"><button>Inicio</button></a>')
-        : jwt.verify(token, hashedSecret, (err, decoded) => {
+        : jwt.verify(token, hashedSecret, (err, decoded) => { // Sería como decir que err === false y decoded === true
             err
                 ? res.status(401).send('<h1>Error de autenticación</h1><p>Token inválido</p><a href="/"><button>Inicio</button></a>')
                 : (req.user = decoded.user)
